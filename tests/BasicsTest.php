@@ -17,12 +17,16 @@ class BasicsTest extends TestCase
 
         // The function name, or {closure} for anonymous functions.
         // TODO __CLASS__
+        $this->assertEquals('BasicsTest', __CLASS__);
 
         // The class method name.
         // TODO __METHOD__
+        $this->assertEquals('BasicsTest::testMagicConstants', __METHOD__);
 
         // The name of the current namespace.
         // TODO __NAMESPACE__
+        $this->assertEquals('', __NAMESPACE__);
+
     }
 
     /**
@@ -38,9 +42,14 @@ class BasicsTest extends TestCase
         // TODO (bool) -1
         // TODO (bool) -10
         // TODO (bool) 0
+        $this->assertEquals(true, (bool) -1);
+        $this->assertEquals(true, (bool) -10);
+        $this->assertEquals(false, (bool) 0);
+
 
         // Strings
         // TODO (bool) ''
+        $this->assertEquals(false, (bool)'');
         // TODO (bool) 'false'
         // TODO (bool) 'not empty string'
 
